@@ -12,7 +12,11 @@ main:
   RCALL delay_ms          ; wait LCD power on
 
   RCALL LCD_init          ; subroutine init LCD
-  
+
+
+  ; test mode 
+  LDI R24, 0
+  LDI R25, 0  
 welcome:
   RCALL display_welcome   ; subroutine display welcome when init
 
@@ -202,18 +206,18 @@ l7: DEC   R22         ;decrement inner loop
 ; ============ DATA SECTION =============
 
 welcome_l1:
-    .ascii "Bobotekkom"
+    .ascii "== Bobotekkom =="
 welcome_l2:
-    .ascii "By: group 12"
+    .ascii "= By: group 12 ="
 
 msg_timer10:
-    .ascii "Timer: 10 min"
+    .ascii "= Timer:10 min ="
 msg_timer5:
-    .ascii "Timer: 5 min"
+    .ascii "= Timer: 5 min ="
 msg_dim:
-    .ascii "Light: dim"
+    .ascii "== Light: dim =="
 msg_off:
-    .ascii "Light: off"
+    .ascii "== Light: off =="
 
 
 
