@@ -84,8 +84,6 @@ main:
     sbi DDRB,1
 
     ; setup timer1 pwm
-    ; WGM1[3:0] = 0101 (Fast PWM 8-bit)
-    ; COM1A[1:0] = 10 (Clear OC1A on compare match, set at BOTTOM)
     ldi r24, (1<<COM1A1) | (1<<WGM10)
     sts TCCR1A, r24
 
