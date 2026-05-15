@@ -134,17 +134,9 @@ display_mode:
   LDI R16, 0x80
   RCALL lcd_set_cursor
   
-  CPI R24, 0              ; check timer mode
-  BREQ timer10
-
 timer5:                   ; u line 1
   LDI ZH, hi8(msg_timer5)
   LDI ZL, lo8(msg_timer5)
-  RJMP print_timer
-
-timer10:
-  LDI ZH, hi8(msg_timer10)
-  LDI ZL, lo8(msg_timer10)
 
 print_timer:
 RCALL lcd_print
@@ -210,15 +202,14 @@ welcome_l1:
 welcome_l2:
     .ascii "= By: group 12 ="
 
-msg_timer10:
-    .ascii "= Timer:10 min ="
 msg_timer5:
     .ascii "= Timer: 5 min ="
 msg_dim:
     .ascii "== Light: dim =="
 msg_off:
     .ascii "== Light: off =="
-
+tell_reset:
+    .ascii "Press b1 > reset"
 
 
 
