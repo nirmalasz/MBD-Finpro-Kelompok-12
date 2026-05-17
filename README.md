@@ -6,7 +6,7 @@
 - PWM LED brightness control via Timer1 OC1B (full / dim / off)
 - 16x2 LCD display showing timer status and light mode
 - UART serial monitor output for real-time feedback
-- 3-button interface (start, reset, toggle mode)
+- 3-button interface (timer, reset, toggle mode)
 
 ---
 
@@ -14,9 +14,9 @@
 
 | Pin | Function |
 |-----|----------|
-| PC0 (A0) | Button 1 — Start timer |
-| PC1 (A1) | Button 2 — Reset (only when timer expired) |
-| PC2 (A2) | Button 3 — Toggle light mode (full ↔ dim) |
+| PC0 (A0) | Button 1 - Start timer |
+| PC1 (A1) | Button 2 - Reset (only when timer expired) |
+| PC2 (A2) | Button 3 - Toggle light mode (full ↔ dim) |
 | PB2 | LED (PWM OC1B) |
 | PB0 | LCD EN |
 | PB1 | LCD RS |
@@ -30,7 +30,7 @@
 |--------|-----------|--------|
 | B1 (PC0) | State = idle | Start timer (4:59 countdown) |
 | B2 (PC1) | State = selesai | Reset to idle, restore LED |
-| B3 (PC2) | State = idle / running | Toggle LED full (255) ↔ dim (128) |
+| B3 (PC2) | State = idle / running | Toggle LED full (255) or dim (128) |
 
 ---
 
@@ -57,7 +57,7 @@
 | r25 | Light mode (0=full, 1=dim) |
 | r28, r29 | Delay counters (push/pop only) |
 
-> All subroutines and the ISR use push/pop to protect global registers. Delay routines use r28/r29 exclusively to avoid overlapping r20–r22.
+> All subroutines and the ISR use push/pop to protect global registers. Delay routines use r28/r29 exclusively to avoid overlapping r20–r22
 
 ---
 
