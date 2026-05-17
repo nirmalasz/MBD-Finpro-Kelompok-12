@@ -73,12 +73,7 @@
 ---
 
 ## Group Member
-Mohammad Ariq Haqi 2406431271
-Yusri Sukur	2406345305
-Nirmala Sari Zahiroh 2406425653
-Khalisa Zahra Maulana 2406425395
-
-
-- **Platform:** Arduino Uno (ATmega328P)
-- **Language:** AVR Assembly
-- **Group:** Bobotekkom — Group 12
+- Mohammad Ariq Haqi 2406431271
+- Yusri Sukur	2406345305
+- Nirmala Sari Zahiroh 2406425653
+- Khalisa Zahra Maulana 2406425395
